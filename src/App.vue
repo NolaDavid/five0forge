@@ -4,11 +4,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header>
-    <div>
-
-      <img alt="Vue logo" class="logo" src="../src/assets/businessCard.jpg" width="125" height="125" />
-    </div>
-    <nav>
+    <nav class="navbar">
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/about">About</RouterLink>
     </nav>
@@ -20,10 +16,18 @@ import { RouterLink, RouterView } from 'vue-router'
 
 header {
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  padding: 10px;
-  background-color: #f8f9fa;
+  padding: 1rem;
+  height: 300px; /* Adjust height as needed */
+  background: url('../src/assets/businessCard.jpg') no-repeat center center;
+  background-size: 147%; /* Scale the image to show more details */
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+  
 }
+
 
 .logo {
   margin-left: 15%;
@@ -46,6 +50,7 @@ nav a {
 nav a:hover {
   color: #007bff;
 }
+
 
 @media (max-width: 1024px) {
   header {
